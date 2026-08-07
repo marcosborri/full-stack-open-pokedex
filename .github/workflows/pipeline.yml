@@ -15,5 +15,7 @@ jobs:
                   node-version: "20"
             - name: install dependencies
               run: npm install
-            - name: Check Style
-              run: npm run eslint
+            - name: Check and fix Style
+              run: |
+                  npm run eslint
+                  npm run eslint:fix
