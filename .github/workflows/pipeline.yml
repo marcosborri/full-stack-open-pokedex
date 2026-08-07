@@ -16,6 +16,5 @@ jobs:
             - name: install dependencies
               run: npm install
             - name: Check and fix Style
-              run: |
-                  npm run eslint
-                  npm run eslint:fix
+              run: npm run eslint
+              run: npm run eslint:fix
