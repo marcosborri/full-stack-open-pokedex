@@ -17,5 +17,3 @@ jobs:
               run: npm install
             - name: Check and fix Style
               run: npm run eslint
-            - name: fix Style
-              run: npm run eslint:fix
