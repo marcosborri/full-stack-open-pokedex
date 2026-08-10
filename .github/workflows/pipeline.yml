@@ -9,7 +9,7 @@ jobs:
     simple_deployment_pipeline:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v4 #Conceptualmete, clona mi repositorio
             - uses: actions/setup-node@v4
               with:
                   node-version: "20"
@@ -31,3 +31,8 @@ jobs:
                   name: playwright-report
                   path: playwright-report/
                   retention-days: 30
+
+            - name: Deploy
+              env:
+                  deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+              run: curl "deploy_url"
