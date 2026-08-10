@@ -8,8 +8,8 @@ app.use(express.static('dist'))
 
 app.get('/version', (req, res) => {
   // eslint-disable-next-line no-constant-condition
-  if (true) throw ('error...  ')
-  res.send('2')
+  //if (true) throw ('error...  ')
+  res.send('3')
 })
 
 app.listen(PORT, () => {
