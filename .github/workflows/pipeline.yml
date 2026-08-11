@@ -26,6 +26,7 @@ jobs:
               run: npm run test
 
             - name: Deploy
+              if: ${{ github.event_name == 'push' }}
               env:
                   deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
               run: curl "$deploy_url"
